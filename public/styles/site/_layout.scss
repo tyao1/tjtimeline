@@ -1,5 +1,9 @@
-#header {
-	margin-top: 30px;
+body{
+ background: $bgcolor;
+ color:$normaltextcolor;
+}
+.container{
+	max-width:960px;
 }
 
 #footer {
@@ -19,21 +23,64 @@ h1{
 	text-align: center;
 }
 .container.title{
-	background:cyan;
 	padding:25px;
 	border-radius:68px;
+	h1{
+		margin:0;
+	}
 }
+
+.timeline{
+	position: relative;
+	&:after{
+		content:'';
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:50%;
+		transform: translateX(-50%);
+		width:10px;
+		background:$linecolor;
+		border-radius:5px;
+		z-index: -1;
+	}
+}
+
+.tofade{
+	opacity:0!important;
+	transform: translate3d(0,100%,0)!important;
+	transition:all .5s ease-in;
+	
+}
+
 .post{
-	a:hover{
-		text-decoration: none;
+	opacity:1;
+	transform:translate3d(0,0,0);
+	transition:all .5s ease-in;
+	.read-more{
+		
+		display: inline-block;
+		padding: 13px 12px;
+		border: 1px solid black;
+		color: black;
+		transition:all .15s ease-in;
+		//border-radius: 5px;
+		&:hover{
+			text-decoration: none;	
+			background:rgba(255,255,255,.5);
+			
+		}
+	}
+	.date{
+		font-style: italic;	
 	}
 	.year{
-		font-size: 1.8em;
+		font-size: 1em;
 		margin: 0;
-		color: #ccc;
+		color: $minortextcolor;
 		padding: 0;
 		line-height: .8;
-		font-style: italic;	
+		
 	}
 	@include clearfix;
 	width:100%;
@@ -46,26 +93,61 @@ h1{
 		
 	}
 	.content{
+		position: relative;
 		padding:25px 0 25px 20px ;
 		width:50%;
 		float:left;
-		margin-left:-10px;
-		border-left: 20px cyan solid;
+		//margin-left:-10px;
+		//border-left: 20px $linecolor solid;
 		
 		color:black;
 		h2{
 			margin: 0 0 .25em;
-			padding:0 0 .15em;
-			border-bottom:1px solid grey;
+			
+			position:relative;
 			display: inline-block;
+			&:after{
+				content: '';
+				position: absolute;
+				bottom: 0;
+				height: 1px;
+				left: 0;
+				background: black;
+				right: 0;
+				transform: scale(0) translate3d(0,0,0);
+				transition: all .18s cubic-bezier(.73,.07,.73,.96);
+				transform-origin: 0 50%;
+			}
 		}
 		p{
 			color:#333;
 		}
 		
 		.inner{
-			&:hover{
-				
+			transition:all .35s cubic-bezier(1,.01,.59,1);	
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			left: -10px;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background: #ceeece;
+			border: 5px solid #2574a9;
+			top: 35px;
+			z-index: 1;
+			box-shadow: 0 0 1px rgba(0,0,0,.5);
+		}
+		
+		&:hover{//parent hover
+			h2{
+				&:after{
+					transform: scale(1) translate3d(0,0,0);	
+				}
+			}
+			.inner{
+				transform:translateX(9px);
 			}
 		}
 	}
