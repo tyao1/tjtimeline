@@ -9,8 +9,7 @@ mixin post(post)
 			.inner
 				h2 #{post.title}
 				div!= post.content.brief
-				if post.image.exists
-					img(src=post._.image.fit(160,160)).img.pull-right
+				
 				if post.content.extended
 					a.read-more(href='/post/' + post.slug)  查看详情
 block intro

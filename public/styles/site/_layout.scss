@@ -1,16 +1,17 @@
 body{
  background: $bgcolor;
  color:$normaltextcolor;
+ font: 14px 'New York','Times New Roman','Apple LiSung Light','Microsoft YaHei Light','Microsoft YaHei',serif;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Georgia','Times New Roman','LiHei Pro Medium,''Apple LiSung Light','Microsoft YaHei',serif;
 }
 .container{
 	max-width:960px;
 }
 
-#footer {
-	margin-top: 30px;
-	border-top: 1px solid $gray-lighter;
-	padding-top: 30px;
-	color: $gray-light;
+#footer{	
+	height:100px;
 }
 
 .gallery-image img{
@@ -43,6 +44,9 @@ h1{
 		background:$linecolor;
 		border-radius:5px;
 		z-index: -1;
+	}
+	@media (max-width: $screen-sm) {
+		margin-left: -50%;
 	}
 }
 

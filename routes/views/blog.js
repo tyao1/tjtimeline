@@ -41,8 +41,8 @@ exports = module.exports = function(req, res) {
 				maxPages: 10
 			})
 			.where('state', 'published')
-			.sort('-publishedDate')
-			.populate('author categories');
+			.sort('-publishedDate');
+			//.populate('author categories');
 		
 		if (locals.data.category) {
 			q.where('categories').in([locals.data.category]);
