@@ -20,7 +20,7 @@ block content
 	.container: .timeline
 		div
 			if filters.category && !data.category
-				h3.text-muted Invalid Category.
+				h3.text-muted 无效的标签。
 			else
 				if data.posts.results.length
 					.blog
@@ -28,6 +28,6 @@ block content
 							+post(post)
 				else
 					if data.category
-						h3.text-muted There are no posts in the category #{data.category.name}.
+						h3.text-muted 在 #{data.category.name} 标签里还没有内容.
 					else
-						h3.text-muted There are no posts yet.
+						h3.text-muted 还没有内容。

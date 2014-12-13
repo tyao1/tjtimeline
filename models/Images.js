@@ -7,7 +7,7 @@ var Image = new keystone.List('Image',{
 });
 
 Image.add({
-	name: { type: Types.Name, required: true, index: true,label:'图片名' },
+	name: { type: String, required: true, index: true,label:'图片名' },
 	image : {
 		label:'图片',
 		type:Types.LocalFile,
@@ -16,7 +16,7 @@ Image.add({
 		allowedTypes:['image/jpeg','image/pjpeg','image/png'],
 		datePrefix:'YYMMDDhms',
 		format:function(item,file){
-			return '<img src="/files/images/'+file.filename+'"	style="max-width:300px"><input value="'+'/files/images/'+file.filename+'">';
+			return '<img src="/files/images/'+file.filename+'"	style="max-width:300px;display:block">';
 		}
 	}
 });
