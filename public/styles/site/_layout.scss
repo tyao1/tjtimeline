@@ -155,5 +155,28 @@ h1{
 			}
 		}
 	}
-	
+	@media (min-width: $screen-sm) {
+		&.opp{
+			.time{
+				text-align: left;
+				float:right;
+				padding: 25px 0 0 30px;
+			}
+			.content{
+				float:right;
+				text-align:right;
+				padding: 25px 20px 25px 0;
+				&:after{
+					left:auto;
+					right:-10px;
+				}
+				&:hover{//parent hover
+
+					.inner{
+						transform:translateX(-9px);
+					}
+				}
+			}
+		}
+	}
 }
