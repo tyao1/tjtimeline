@@ -8,11 +8,11 @@ var keystone = require('keystone'),
 
 var PostCategory = new keystone.List('PostCategory', {
 	autokey: { from: 'name', path: 'key', unique: true },
-    label :'标签'
+    label :'Tags'
 });
 
 PostCategory.add({
-	name: { type: String, required: true,label:'名称' }
+	name: { type: String, required: true}
 });
 
 PostCategory.relationship({ ref: 'Post', path: 'categories' });

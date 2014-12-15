@@ -19,7 +19,7 @@ block content
 					if data.post.categories && data.post.categories.length
 												| 标签： 
 												each cat, cat_i in data.post.categories
-													a(href='/' + cat.key)= cat.name
+													a(href='/timeline/' + cat.key)= cat.name
 													if cat_i < data.post.categories.length - 1
 														| , 
 													else

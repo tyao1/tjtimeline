@@ -5,6 +5,6 @@ $(function(){
 		$(this).removeClass('tofade');
 		$(this).waypoint('destroy');
 
-	}, { offset: '85%' });
+	}, { offset: '90%' });
 	
 });

@@ -2,14 +2,12 @@ var keystone = require('keystone'),
 	Types = keystone.Field.Types;
 
 var Image = new keystone.List('Image',{
-	label:'图片',
 	autokey:{from:'name',path:'key',unique:true}
 });
 
 Image.add({
-	name: { type: String, required: true, index: true,label:'图片名' },
+	name: { type: String, required: true, index: true},
 	image : {
-		label:'图片',
 		type:Types.LocalFile,
 		dest:__dirname+'/../public/files/images',
 		prefix:'/files/images',
