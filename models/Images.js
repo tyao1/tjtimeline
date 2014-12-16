@@ -9,12 +9,12 @@ Image.add({
 	name: { type: String, required: true, index: true},
 	image : {
 		type:Types.LocalFile,
-		dest:__dirname+'/../public/files/images',
-		prefix:'/files/images',
+		dest:__dirname+'/../public/timeline/files/images',
+		prefix:'/timeline/files/images',
 		allowedTypes:['image/jpeg','image/pjpeg','image/png'],
 		datePrefix:'YYMMDDhms',
 		format:function(item,file){
-			return '<img src="/files/images/'+file.filename+'"	style="max-width:300px;display:block">';
+			return '<img src="/timeline/files/images/'+file.filename+'"	style="max-width:300px;display:block">';
 		}
 	}
 });

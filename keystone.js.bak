@@ -1,4 +1,4 @@
-// Simulate config options from your production environment by
+﻿// Simulate config options from your production environment by
 // customising the .env file in your project's root folder.
 require('dotenv').load();
 
@@ -14,7 +14,7 @@ keystone.init({
 	'name': 'TJTimeline',
 	'brand': 'TJTimeline',
 	
-	'sass': 'public',
+	//'sass': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
@@ -24,9 +24,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'cookie secret': '`H,Sh?CT`uI9?{{_i`E3w-bdi:GOy;8xs-`PK76e]DTR-l0~42I9Nf^eF|Aq-P@f',
-	'wysiwyg images':true,
-	'wysiwyg additional':'blockquote fullscreen'
+	'cookie secret': '`H,Sh?CT`uI9?{{_i`E3w-bdi:GOy;8xs-`PK76e]DTR-l0~42I9Nf^eF|Aq-P@f'
 
 });
 
@@ -55,8 +53,8 @@ keystone.set('routes', require('./routes'));
 // Configure the navigation bar in Keystone's Admin UI
 
 keystone.set('nav', {
-	'Posts': ['posts', 'post-categories'],
-	'Users': 'users'
+	'文章': ['posts', 'post-categories'],
+	'用户': 'users'
 });
 
 // Start Keystone to connect to your database and initialise the web server

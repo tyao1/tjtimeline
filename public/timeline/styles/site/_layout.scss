@@ -23,6 +23,7 @@ h1,h2,h3,h4,h5,h6{
 h1{
 	text-align: center;
 }
+
 .container.title{
 	padding:25px;
 	border-radius:68px;
@@ -114,6 +115,13 @@ h1{
 		h2{
 			margin: 0 0 .25em;
 			
+			
+		}
+		p{
+			color:#333;
+		}
+		.tags a{
+			color:#111;
 			position:relative;
 			display: inline-block;
 			&:after{
@@ -122,18 +130,12 @@ h1{
 				bottom: 0;
 				height: 1px;
 				left: 0;
-				background: black;
+				background: #CCC;
 				right: 0;
 				transform: scale(0) translate3d(0,0,0);
 				transition: all .18s cubic-bezier(.73,.07,.73,.96);
 				transform-origin: 0 50%;
 			}
-		}
-		p{
-			color:#333;
-		}
-		.tags a{
-			color:#111;
 		}
 		.inner>*{
 			transition:all .35s cubic-bezier(1,.01,.59,1);	
@@ -153,7 +155,8 @@ h1{
 		}
 		
 		&:hover{//parent hover
-			h2{
+			.tags a{
+				text-decoration: none;
 				&:after{
 					transform: scale(1) translate3d(0,0,0);	
 				}
@@ -165,7 +168,7 @@ h1{
 				&>div{
 				transform:translateX(12px);
 				}
-				a{
+				.read-more{
 					transform:translateX(13px);
 				}
 			}
@@ -195,7 +198,7 @@ h1{
 							&>div{
 							transform:translateX(-12px);
 							}
-							a{
+							.read-more{
 								transform:translateX(-13px);
 							}
 					}
@@ -221,4 +224,16 @@ h1{
 		box-shadow: 0 0 3px rgba(0,0,0,.45);
 	}
 	
+}
+
+.list-group{
+	padding: 12px;
+	a{
+		display: inline-block;
+		padding:3px 6px;
+		color:darken($bgcolor,34);
+		&.active,&:active{
+			color:darken($bgcolor,60);
+		}
+	}
 }

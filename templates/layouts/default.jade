@@ -13,7 +13,7 @@ html
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 
 		//- Customise the stylesheet for your site by editing /public/styles/site.sass
-		link(href="/styles/site.css", rel="stylesheet")
+		link(href="/timeline/styles/site.css", rel="stylesheet")
 
 		//- This file provides the default styling for the KeystoneJS Content Editor
 		if user && user.canAccessKeystone
@@ -68,12 +68,12 @@ html
 		//- jQuery 1.11.1 is included by default, and required by both Bootstrap
 		//- and the KeystoneJS Content Editor. If you are not targeting IE8,
 		//- you can upgrade to 2.1.1 (also bundled) for better performance.
-		script(src='/js/lib/jquery/jquery-1.11.1.min.js')
-		script(src='/js/lib/waypoints.min.js')
-		script(src='/js/main.js')
+		script(src='/timeline/js/lib/jquery/jquery-1.11.1.min.js')
+		script(src='/timeline/js/lib/waypoints.min.js')
+		script(src='/timeline/js/main.js')
 		//- Customise which Bootstrap javascript files are served by including
 		//- them specifically here, instead of bootstrap-3.2.0.min.js
-		script(src='/js/lib/bootstrap/bootstrap-3.2.0.min.js')
+		script(src='/timeline/js/lib/bootstrap/bootstrap-3.2.0.min.js')
 
 		//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
 		//- which generate links to edit content for users who can access Keystone

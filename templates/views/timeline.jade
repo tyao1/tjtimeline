@@ -21,9 +21,14 @@ mixin post(post)
 								else
 									| 
 				if post.content.extended
-					a.read-more(href='/post/' + post.slug)  查看详情
+					a.read-more(href='/timeline/post/' + post.slug)  查看详情
 		
 block intro
+	if data.categories.length
+		.list-group
+			a(href='/timeline', class=!data.category ? 'active' : false).list-group-item 所有
+			each cat in data.categories
+				a(href='/timeline/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item=cat.name
 	.container.title
 		h1= data.category ? data.category.name : '所有时间线'
 
