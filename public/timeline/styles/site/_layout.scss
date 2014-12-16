@@ -10,7 +10,9 @@ h1,h2,h3,h4,h5,h6{
 .container{
 	max-width:960px;
 }
-
+ul,ol{
+	list-style-position: inside;
+}
 #footer{	
 	height:100px;
 }
