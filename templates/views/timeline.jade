@@ -47,7 +47,6 @@ block content
 							- p=!p;
 							- var month =11*post.publishedDate.getFullYear()+post.publishedDate.getUTCMonth();
 							- if(tmp.indexOf(month)<0)
-								-console.log('new');
 								-tmp.push(month);
 								.maindate.tofade: span!=post._.publishedDate.format('YYYY年MM月')
 							- endif
